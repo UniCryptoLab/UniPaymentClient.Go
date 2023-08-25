@@ -1,4 +1,4 @@
-# UniPayment PHP Client
+# UniPayment Go Client
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/UniCryptoLab/UniPaymentClient.PHP/blob/main/UniPaymentClient/LICENSE.txt)
 
 A Go client for the [UniPayment Client API](https://unipayment.readme.io/reference/overview).
