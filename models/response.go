@@ -7,7 +7,7 @@ import (
 type APIResponse struct {
 	*http.Response `json:"-"`
 	Message        string `json:"message,omitempty"`
-	// Operation is the name of the swagger operation.
+	// Operation is the name of the operation.
 	Operation string `json:"operation,omitempty"`
 	// RequestURL is the request URL. This value is always available, even if the
 	// embedded *http.Response is nil.

@@ -64,7 +64,7 @@ func (a *ApiClient) CheckIPN(notify string) (ResponseCheckIpnResponse, *http.Res
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
-		newErr := GenericSwaggerError{
+		newErr := GenericApiError{
 			body:  localVarBody,
 			error: localVarHttpResponse.Status,
 		}
@@ -129,7 +129,7 @@ func (a *ApiClient) GetCurrencies() (ResponseListCurrency, *http.Response, error
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
-		newErr := GenericSwaggerError{
+		newErr := GenericApiError{
 			body:  localVarBody,
 			error: localVarHttpResponse.Status,
 		}
@@ -196,7 +196,7 @@ func (a *ApiClient) GetExchangeRateByCurrencyPair(fiatCurrency string, cryptoCur
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
-		newErr := GenericSwaggerError{
+		newErr := GenericApiError{
 			body:  localVarBody,
 			error: localVarHttpResponse.Status,
 		}
@@ -262,7 +262,7 @@ func (a *ApiClient) GetExchangeRateByFiatCurrency(fiatCurrency string) (Response
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
-		newErr := GenericSwaggerError{
+		newErr := GenericApiError{
 			body:  localVarBody,
 			error: localVarHttpResponse.Status,
 		}
@@ -327,7 +327,7 @@ func (a *ApiClient) QueryIps() (ResponseListString, *http.Response, error) {
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
-		newErr := GenericSwaggerError{
+		newErr := GenericApiError{
 			body:  localVarBody,
 			error: localVarHttpResponse.Status,
 		}
@@ -396,7 +396,7 @@ func (a *ApiClient) CreateInvoice(createInvoiceRequest CreateInvoiceRequest) (Re
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
-		newErr := GenericSwaggerError{
+		newErr := GenericApiError{
 			body:  localVarBody,
 			error: localVarHttpResponse.Status,
 		}
@@ -462,7 +462,7 @@ func (a *ApiClient) QueryInvoiceById(invoiceId string) (ResponseInvoiceDetailMod
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
-		newErr := GenericSwaggerError{
+		newErr := GenericApiError{
 			body:  localVarBody,
 			error: localVarHttpResponse.Status,
 		}
@@ -535,7 +535,7 @@ func (a *ApiClient) QueryInvoices(queryInvoiceRequest QueryInvoicesRequest) (Res
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
-		newErr := GenericSwaggerError{
+		newErr := GenericApiError{
 			body:  localVarBody,
 			error: localVarHttpResponse.Status,
 		}
@@ -605,7 +605,7 @@ func (a *ApiClient) CreatePayout(createPayoutRequest CreatePayoutRequest) (Respo
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
-		newErr := GenericSwaggerError{
+		newErr := GenericApiError{
 			body:  localVarBody,
 			error: localVarHttpResponse.Status,
 		}
@@ -671,7 +671,7 @@ func (a *ApiClient) GetPayoutById(payoutId string) (ResponsePayoutDetailModel, *
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
-		newErr := GenericSwaggerError{
+		newErr := GenericApiError{
 			body:  localVarBody,
 			error: localVarHttpResponse.Status,
 		}
@@ -736,7 +736,7 @@ func (a *ApiClient) QueryPayouts() (ResponseQueryResultPayoutModel, *http.Respon
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
-		newErr := GenericSwaggerError{
+		newErr := GenericApiError{
 			body:  localVarBody,
 			error: localVarHttpResponse.Status,
 		}
@@ -801,7 +801,7 @@ func (a *ApiClient) GetWalletBalances() (ResponseListBalanceModel, *http.Respons
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
-		newErr := GenericSwaggerError{
+		newErr := GenericApiError{
 			body:  localVarBody,
 			error: localVarHttpResponse.Status,
 		}
@@ -871,7 +871,7 @@ func (a *ApiClient) CreateWithdrawal(createWithdrawalRequest CreateWithdrawalReq
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
-		newErr := GenericSwaggerError{
+		newErr := GenericApiError{
 			body:  localVarBody,
 			error: localVarHttpResponse.Status,
 		}
@@ -937,7 +937,7 @@ func (a *ApiClient) GetWithdrawalById(withdrawalId string) (ResponseWithdrawalMo
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
-		newErr := GenericSwaggerError{
+		newErr := GenericApiError{
 			body:  localVarBody,
 			error: localVarHttpResponse.Status,
 		}
@@ -1002,7 +1002,7 @@ func (a *ApiClient) QueryWithdrawals() (ResponseQueryResultWithdrawalModel, *htt
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
-		newErr := GenericSwaggerError{
+		newErr := GenericApiError{
 			body:  localVarBody,
 			error: localVarHttpResponse.Status,
 		}
@@ -1072,7 +1072,7 @@ func (a *ApiClient) CancelWithdrawal(cancelWithdrawalRequest CancelWithdrawalReq
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
-		newErr := GenericSwaggerError{
+		newErr := GenericApiError{
 			body:  localVarBody,
 			error: localVarHttpResponse.Status,
 		}

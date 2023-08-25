@@ -309,25 +309,25 @@ func detectContentType(body interface{}) string {
 	return contentType
 }
 
-// GenericSwaggerError Provides access to the body, error and model on returned errors.
-type GenericSwaggerError struct {
+// GenericApiError Provides access to the body, error and model on returned errors.
+type GenericApiError struct {
 	body  []byte
 	error string
 	model interface{}
 }
 
 // Error returns non-empty string if there was an error.
-func (e GenericSwaggerError) Error() string {
+func (e GenericApiError) Error() string {
 	return e.error
 }
 
 // Body returns the raw bytes of the response
-func (e GenericSwaggerError) Body() []byte {
+func (e GenericApiError) Body() []byte {
 	return e.body
 }
 
 // Model returns the unpacked model of the error
-func (e GenericSwaggerError) Model() interface{} {
+func (e GenericApiError) Model() interface{} {
 	return e.model
 }
 
