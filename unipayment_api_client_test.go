@@ -155,6 +155,18 @@ func TestApiClient_GetWithdrawalById(t *testing.T) {
 	}
 }
 
+func TestApiClient_QueryWithdrawals(t *testing.T) {
+	response, _, err := apiClient.QueryWithdrawals(QueryWithdrawalRequest{AssetType: "BNB", PageNo: 1, PageSize: 10})
+	if err != nil {
+		t.Error(err)
+		return
+	}
+	want := "OK"
+	if response.Code != want {
+		t.Errorf("got %q, wanted %q", response.Code, want)
+	}
+}
+
 func TestApiClient_CancelWithdrawal(t *testing.T) {
 	cancelWithdrawalRequest := CancelWithdrawalRequest{Id: "a6389658-ac47-42f7-b71e-4bd1dc51ee2d"}
 	response, _, err := apiClient.CancelWithdrawal(cancelWithdrawalRequest)
@@ -198,7 +210,7 @@ func TestApiClient_GetPayoutById(t *testing.T) {
 }
 
 func TestApiClient_QueryPayouts(t *testing.T) {
-	response, _, err := apiClient.QueryPayouts()
+	response, _, err := apiClient.QueryPayouts(QueryPayoutRequest{AssetType: "BNB", PageNo: 1, PageSize: 10})
 	if err != nil {
 		t.Error(err)
 		return

@@ -7,7 +7,7 @@ type QueryInvoicesRequest struct {
 	Status    string `schema:"status,omitempty"`
 	PageNo    int    `schema:"page_no"`
 	PageSize  int    `schema:"page_size"`
-	IsAsc     bool   `schema:"is_asc"`
-	Start     string `schema:"start"`
-	End       string `schema:"start"`
+	IsAsc     bool   `schema:"is_asc,omitempty"`
+	Start     string `schema:"start,omitempty"`
+	End       string `schema:"end,omitempty"`
 }

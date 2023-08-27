@@ -691,7 +691,7 @@ func (a *ApiClient) GetPayoutById(payoutId string) (ResponsePayoutDetailModel, *
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-func (a *ApiClient) QueryPayouts() (ResponseQueryResultPayoutModel, *http.Response, error) {
+func (a *ApiClient) QueryPayouts(queryPayoutRequest QueryPayoutRequest) (ResponseQueryResultPayoutModel, *http.Response, error) {
 	var (
 		localVarHttpMethod  = strings.ToUpper("Get")
 		localVarPostBody    interface{}
@@ -706,6 +706,15 @@ func (a *ApiClient) QueryPayouts() (ResponseQueryResultPayoutModel, *http.Respon
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
+
+	err := encoder.Encode(&queryPayoutRequest, localVarQueryParams)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	currentTime := time.Now().UTC()
+	formattedTime := currentTime.Format("20060102150405")
+	localVarQueryParams.Add("rd", formattedTime)
 
 	// to determine the Content-Type header
 	localVarHeaderParams["Accept"] = "application/json"
@@ -957,7 +966,7 @@ func (a *ApiClient) GetWithdrawalById(withdrawalId string) (ResponseWithdrawalMo
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-func (a *ApiClient) QueryWithdrawals() (ResponseQueryResultWithdrawalModel, *http.Response, error) {
+func (a *ApiClient) QueryWithdrawals(queryWithdrawalRequest QueryWithdrawalRequest) (ResponseQueryResultWithdrawalModel, *http.Response, error) {
 	var (
 		localVarHttpMethod  = strings.ToUpper("Get")
 		localVarPostBody    interface{}
@@ -972,6 +981,15 @@ func (a *ApiClient) QueryWithdrawals() (ResponseQueryResultWithdrawalModel, *htt
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
+
+	err := encoder.Encode(&queryWithdrawalRequest, localVarQueryParams)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	currentTime := time.Now().UTC()
+	formattedTime := currentTime.Format("20060102150405")
+	localVarQueryParams.Add("rd", formattedTime)
 
 	// to determine the Content-Type header
 	localVarHeaderParams["Accept"] = "application/json"
