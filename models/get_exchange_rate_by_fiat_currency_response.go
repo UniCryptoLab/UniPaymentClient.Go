@@ -1,7 +1,7 @@
 package unipayment
 
-type ResponseListBalanceModel struct {
+type GetExchangeRateByFiatCurrencyResponse struct {
 	Code string         `json:"code,omitempty"`
 	Msg  string         `json:"msg,omitempty"`
-	Data []BalanceModel `json:"data,omitempty"`
+	Data []ExchangeRate `json:"data,omitempty"`
 }

@@ -16,13 +16,13 @@ var encoder = schema.NewEncoder()
 
 type ApiClient service
 
-func (a *ApiClient) CheckIPN(notify string) (ResponseCheckIpnResponse, *http.Response, error) {
+func (a *ApiClient) CheckIPN(notify string) (CheckIpnResponse, *http.Response, error) {
 	var (
 		localVarHttpMethod  = strings.ToUpper("Post")
 		localVarPostBody    interface{}
 		localVarFileName    string
 		localVarFileBytes   []byte
-		localVarReturnValue ResponseCheckIpnResponse
+		localVarReturnValue CheckIpnResponse
 	)
 
 	// create path and map variables
@@ -69,7 +69,7 @@ func (a *ApiClient) CheckIPN(notify string) (ResponseCheckIpnResponse, *http.Res
 			error: localVarHttpResponse.Status,
 		}
 		if localVarHttpResponse.StatusCode == 200 {
-			var v ResponseCheckIpnResponse
+			var v CheckIpnResponse
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()
@@ -84,13 +84,13 @@ func (a *ApiClient) CheckIPN(notify string) (ResponseCheckIpnResponse, *http.Res
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-func (a *ApiClient) GetCurrencies() (ResponseListCurrency, *http.Response, error) {
+func (a *ApiClient) GetCurrencies() (GetCurrencyResponse, *http.Response, error) {
 	var (
 		localVarHttpMethod  = strings.ToUpper("Get")
 		localVarPostBody    interface{}
 		localVarFileName    string
 		localVarFileBytes   []byte
-		localVarReturnValue ResponseListCurrency
+		localVarReturnValue GetCurrencyResponse
 	)
 
 	// create path and map variables
@@ -134,7 +134,7 @@ func (a *ApiClient) GetCurrencies() (ResponseListCurrency, *http.Response, error
 			error: localVarHttpResponse.Status,
 		}
 		if localVarHttpResponse.StatusCode == 200 {
-			var v ResponseListCurrency
+			var v GetCurrencyResponse
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()
@@ -149,13 +149,13 @@ func (a *ApiClient) GetCurrencies() (ResponseListCurrency, *http.Response, error
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-func (a *ApiClient) GetExchangeRateByCurrencyPair(fiatCurrency string, cryptoCurrency string) (ResponseExchangeRate, *http.Response, error) {
+func (a *ApiClient) GetExchangeRateByCurrencyPair(fiatCurrency string, cryptoCurrency string) (GetExchangeRateResponse, *http.Response, error) {
 	var (
 		localVarHttpMethod  = strings.ToUpper("Get")
 		localVarPostBody    interface{}
 		localVarFileName    string
 		localVarFileBytes   []byte
-		localVarReturnValue ResponseExchangeRate
+		localVarReturnValue GetExchangeRateResponse
 	)
 
 	// create path and map variables
@@ -201,7 +201,7 @@ func (a *ApiClient) GetExchangeRateByCurrencyPair(fiatCurrency string, cryptoCur
 			error: localVarHttpResponse.Status,
 		}
 		if localVarHttpResponse.StatusCode == 200 {
-			var v ResponseExchangeRate
+			var v GetExchangeRateResponse
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()
@@ -216,13 +216,13 @@ func (a *ApiClient) GetExchangeRateByCurrencyPair(fiatCurrency string, cryptoCur
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-func (a *ApiClient) GetExchangeRateByFiatCurrency(fiatCurrency string) (ResponseListExchangeRate, *http.Response, error) {
+func (a *ApiClient) GetExchangeRateByFiatCurrency(fiatCurrency string) (GetExchangeRateByFiatCurrencyResponse, *http.Response, error) {
 	var (
 		localVarHttpMethod  = strings.ToUpper("Get")
 		localVarPostBody    interface{}
 		localVarFileName    string
 		localVarFileBytes   []byte
-		localVarReturnValue ResponseListExchangeRate
+		localVarReturnValue GetExchangeRateByFiatCurrencyResponse
 	)
 
 	// create path and map variables
@@ -267,7 +267,7 @@ func (a *ApiClient) GetExchangeRateByFiatCurrency(fiatCurrency string) (Response
 			error: localVarHttpResponse.Status,
 		}
 		if localVarHttpResponse.StatusCode == 200 {
-			var v ResponseListExchangeRate
+			var v GetExchangeRateByFiatCurrencyResponse
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()
@@ -282,13 +282,13 @@ func (a *ApiClient) GetExchangeRateByFiatCurrency(fiatCurrency string) (Response
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-func (a *ApiClient) QueryIps() (ResponseListString, *http.Response, error) {
+func (a *ApiClient) QueryIps() (QueryIPNResponse, *http.Response, error) {
 	var (
 		localVarHttpMethod  = strings.ToUpper("Get")
 		localVarPostBody    interface{}
 		localVarFileName    string
 		localVarFileBytes   []byte
-		localVarReturnValue ResponseListString
+		localVarReturnValue QueryIPNResponse
 	)
 
 	// create path and map variables
@@ -332,7 +332,7 @@ func (a *ApiClient) QueryIps() (ResponseListString, *http.Response, error) {
 			error: localVarHttpResponse.Status,
 		}
 		if localVarHttpResponse.StatusCode == 200 {
-			var v ResponseListString
+			var v QueryIPNResponse
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()
@@ -347,13 +347,13 @@ func (a *ApiClient) QueryIps() (ResponseListString, *http.Response, error) {
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-func (a *ApiClient) CreateInvoice(createInvoiceRequest CreateInvoiceRequest) (ResponseInvoiceModel, *http.Response, error) {
+func (a *ApiClient) CreateInvoice(createInvoiceRequest CreateInvoiceRequest) (CreateInvoiceResponse, *http.Response, error) {
 	var (
 		localVarHttpMethod  = strings.ToUpper("Post")
 		localVarPostBody    interface{}
 		localVarFileName    string
 		localVarFileBytes   []byte
-		localVarReturnValue ResponseInvoiceModel
+		localVarReturnValue CreateInvoiceResponse
 	)
 
 	// create path and map variables
@@ -401,7 +401,7 @@ func (a *ApiClient) CreateInvoice(createInvoiceRequest CreateInvoiceRequest) (Re
 			error: localVarHttpResponse.Status,
 		}
 		if localVarHttpResponse.StatusCode == 200 {
-			var v ResponseInvoiceModel
+			var v CreateInvoiceResponse
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()
@@ -416,13 +416,13 @@ func (a *ApiClient) CreateInvoice(createInvoiceRequest CreateInvoiceRequest) (Re
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-func (a *ApiClient) QueryInvoiceById(invoiceId string) (ResponseInvoiceDetailModel, *http.Response, error) {
+func (a *ApiClient) QueryInvoiceById(invoiceId string) (QueryInvoiceByIdResponse, *http.Response, error) {
 	var (
 		localVarHttpMethod  = strings.ToUpper("Get")
 		localVarPostBody    interface{}
 		localVarFileName    string
 		localVarFileBytes   []byte
-		localVarReturnValue ResponseInvoiceDetailModel
+		localVarReturnValue QueryInvoiceByIdResponse
 	)
 
 	// create path and map variables
@@ -467,7 +467,7 @@ func (a *ApiClient) QueryInvoiceById(invoiceId string) (ResponseInvoiceDetailMod
 			error: localVarHttpResponse.Status,
 		}
 		if localVarHttpResponse.StatusCode == 200 {
-			var v ResponseInvoiceDetailModel
+			var v QueryInvoiceByIdResponse
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()
@@ -482,13 +482,13 @@ func (a *ApiClient) QueryInvoiceById(invoiceId string) (ResponseInvoiceDetailMod
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-func (a *ApiClient) QueryInvoices(queryInvoiceRequest QueryInvoicesRequest) (ResponseQueryResultInvoiceModel, *http.Response, error) {
+func (a *ApiClient) QueryInvoices(queryInvoiceRequest QueryInvoicesRequest) (QueryInvoicesResponse, *http.Response, error) {
 	var (
 		localVarHttpMethod  = strings.ToUpper("Get")
 		localVarPostBody    interface{}
 		localVarFileName    string
 		localVarFileBytes   []byte
-		localVarReturnValue ResponseQueryResultInvoiceModel
+		localVarReturnValue QueryInvoicesResponse
 	)
 
 	// create path and map variables
@@ -540,7 +540,7 @@ func (a *ApiClient) QueryInvoices(queryInvoiceRequest QueryInvoicesRequest) (Res
 			error: localVarHttpResponse.Status,
 		}
 		if localVarHttpResponse.StatusCode == 200 {
-			var v ResponseQueryResultInvoiceModel
+			var v QueryInvoicesResponse
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()
@@ -555,13 +555,13 @@ func (a *ApiClient) QueryInvoices(queryInvoiceRequest QueryInvoicesRequest) (Res
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-func (a *ApiClient) CreatePayout(createPayoutRequest CreatePayoutRequest) (ResponsePayoutDetailModel, *http.Response, error) {
+func (a *ApiClient) CreatePayout(createPayoutRequest CreatePayoutRequest) (CreatePayoutResponse, *http.Response, error) {
 	var (
 		localVarHttpMethod  = strings.ToUpper("Post")
 		localVarPostBody    interface{}
 		localVarFileName    string
 		localVarFileBytes   []byte
-		localVarReturnValue ResponsePayoutDetailModel
+		localVarReturnValue CreatePayoutResponse
 	)
 
 	// create path and map variables
@@ -610,7 +610,7 @@ func (a *ApiClient) CreatePayout(createPayoutRequest CreatePayoutRequest) (Respo
 			error: localVarHttpResponse.Status,
 		}
 		if localVarHttpResponse.StatusCode == 200 {
-			var v ResponsePayoutDetailModel
+			var v CreatePayoutResponse
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()
@@ -625,13 +625,13 @@ func (a *ApiClient) CreatePayout(createPayoutRequest CreatePayoutRequest) (Respo
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-func (a *ApiClient) GetPayoutById(payoutId string) (ResponsePayoutDetailModel, *http.Response, error) {
+func (a *ApiClient) GetPayoutById(payoutId string) (GetPayoutByIdResponse, *http.Response, error) {
 	var (
 		localVarHttpMethod  = strings.ToUpper("Get")
 		localVarPostBody    interface{}
 		localVarFileName    string
 		localVarFileBytes   []byte
-		localVarReturnValue ResponsePayoutDetailModel
+		localVarReturnValue GetPayoutByIdResponse
 	)
 
 	// create path and map variables
@@ -676,7 +676,7 @@ func (a *ApiClient) GetPayoutById(payoutId string) (ResponsePayoutDetailModel, *
 			error: localVarHttpResponse.Status,
 		}
 		if localVarHttpResponse.StatusCode == 200 {
-			var v ResponsePayoutDetailModel
+			var v CreatePayoutResponse
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()
@@ -691,13 +691,13 @@ func (a *ApiClient) GetPayoutById(payoutId string) (ResponsePayoutDetailModel, *
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-func (a *ApiClient) QueryPayouts(queryPayoutRequest QueryPayoutRequest) (ResponseQueryResultPayoutModel, *http.Response, error) {
+func (a *ApiClient) QueryPayouts(queryPayoutRequest QueryPayoutRequest) (QueryPayoutsResponse, *http.Response, error) {
 	var (
 		localVarHttpMethod  = strings.ToUpper("Get")
 		localVarPostBody    interface{}
 		localVarFileName    string
 		localVarFileBytes   []byte
-		localVarReturnValue ResponseQueryResultPayoutModel
+		localVarReturnValue QueryPayoutsResponse
 	)
 
 	// create path and map variables
@@ -750,7 +750,7 @@ func (a *ApiClient) QueryPayouts(queryPayoutRequest QueryPayoutRequest) (Respons
 			error: localVarHttpResponse.Status,
 		}
 		if localVarHttpResponse.StatusCode == 200 {
-			var v ResponseQueryResultPayoutModel
+			var v QueryPayoutsResponse
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()
@@ -765,13 +765,13 @@ func (a *ApiClient) QueryPayouts(queryPayoutRequest QueryPayoutRequest) (Respons
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-func (a *ApiClient) GetWalletBalances() (ResponseListBalanceModel, *http.Response, error) {
+func (a *ApiClient) GetWalletBalances() (GetWalletBalancesResponse, *http.Response, error) {
 	var (
 		localVarHttpMethod  = strings.ToUpper("Get")
 		localVarPostBody    interface{}
 		localVarFileName    string
 		localVarFileBytes   []byte
-		localVarReturnValue ResponseListBalanceModel
+		localVarReturnValue GetWalletBalancesResponse
 	)
 
 	// create path and map variables
@@ -815,7 +815,7 @@ func (a *ApiClient) GetWalletBalances() (ResponseListBalanceModel, *http.Respons
 			error: localVarHttpResponse.Status,
 		}
 		if localVarHttpResponse.StatusCode == 200 {
-			var v ResponseListBalanceModel
+			var v GetWalletBalancesResponse
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()
@@ -830,13 +830,13 @@ func (a *ApiClient) GetWalletBalances() (ResponseListBalanceModel, *http.Respons
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-func (a *ApiClient) CreateWithdrawal(createWithdrawalRequest CreateWithdrawalRequest) (ResponseWithdrawalModel, *http.Response, error) {
+func (a *ApiClient) CreateWithdrawal(createWithdrawalRequest CreateWithdrawalRequest) (CreateWithdrawalResponse, *http.Response, error) {
 	var (
 		localVarHttpMethod  = strings.ToUpper("Post")
 		localVarPostBody    interface{}
 		localVarFileName    string
 		localVarFileBytes   []byte
-		localVarReturnValue ResponseWithdrawalModel
+		localVarReturnValue CreateWithdrawalResponse
 	)
 
 	// create path and map variables
@@ -885,7 +885,7 @@ func (a *ApiClient) CreateWithdrawal(createWithdrawalRequest CreateWithdrawalReq
 			error: localVarHttpResponse.Status,
 		}
 		if localVarHttpResponse.StatusCode == 200 {
-			var v ResponseWithdrawalModel
+			var v CreateWithdrawalResponse
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()
@@ -900,13 +900,13 @@ func (a *ApiClient) CreateWithdrawal(createWithdrawalRequest CreateWithdrawalReq
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-func (a *ApiClient) GetWithdrawalById(withdrawalId string) (ResponseWithdrawalModel, *http.Response, error) {
+func (a *ApiClient) GetWithdrawalById(withdrawalId string) (GetWithdrawalByIdResponse, *http.Response, error) {
 	var (
 		localVarHttpMethod  = strings.ToUpper("Get")
 		localVarPostBody    interface{}
 		localVarFileName    string
 		localVarFileBytes   []byte
-		localVarReturnValue ResponseWithdrawalModel
+		localVarReturnValue GetWithdrawalByIdResponse
 	)
 
 	// create path and map variables
@@ -951,7 +951,7 @@ func (a *ApiClient) GetWithdrawalById(withdrawalId string) (ResponseWithdrawalMo
 			error: localVarHttpResponse.Status,
 		}
 		if localVarHttpResponse.StatusCode == 200 {
-			var v ResponseWithdrawalModel
+			var v GetWithdrawalByIdResponse
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()
@@ -966,13 +966,13 @@ func (a *ApiClient) GetWithdrawalById(withdrawalId string) (ResponseWithdrawalMo
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-func (a *ApiClient) QueryWithdrawals(queryWithdrawalRequest QueryWithdrawalRequest) (ResponseQueryResultWithdrawalModel, *http.Response, error) {
+func (a *ApiClient) QueryWithdrawals(queryWithdrawalRequest QueryWithdrawalRequest) (QueryWithdrawalResponse, *http.Response, error) {
 	var (
 		localVarHttpMethod  = strings.ToUpper("Get")
 		localVarPostBody    interface{}
 		localVarFileName    string
 		localVarFileBytes   []byte
-		localVarReturnValue ResponseQueryResultWithdrawalModel
+		localVarReturnValue QueryWithdrawalResponse
 	)
 
 	// create path and map variables
@@ -1025,7 +1025,7 @@ func (a *ApiClient) QueryWithdrawals(queryWithdrawalRequest QueryWithdrawalReque
 			error: localVarHttpResponse.Status,
 		}
 		if localVarHttpResponse.StatusCode == 200 {
-			var v ResponseQueryResultWithdrawalModel
+			var v QueryWithdrawalResponse
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()

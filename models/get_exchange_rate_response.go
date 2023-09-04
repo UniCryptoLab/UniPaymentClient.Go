@@ -1,7 +1,7 @@
 package unipayment
 
-type ResponseInvoiceModel struct {
+type GetExchangeRateResponse struct {
 	Code string        `json:"code,omitempty"`
 	Msg  string        `json:"msg,omitempty"`
-	Data *InvoiceModel `json:"data,omitempty"`
+	Data *ExchangeRate `json:"data,omitempty"`
 }
