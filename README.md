@@ -7,11 +7,12 @@ This SDK provides a convenient abstraction of UniPayment's Gateway API and allow
 
 ## Getting Started
 
-[SDK Tutorial](https://unipayment.io/en/docs/sdk/tutorial/)
+[Integrate Tutorial](https://help.unipayment.io/en/articles/7851188-integrate-with-payment-gateway)
 
 Before using the UniPayment API, sign up for your [API key](https://console.unipayment.io/).
 
-If you want to use the Sandbox, sign up [here](https://sandbox-console.unipayment.io/).
+You can also use our test tokens for testing and integration. [Documentation](https://help.unipayment.io/en/articles/8263248-how-to-use-testcoin).
+
 
 ## Installation
 
