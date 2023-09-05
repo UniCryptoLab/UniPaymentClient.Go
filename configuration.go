@@ -22,7 +22,7 @@ type Configuration struct {
 
 func NewConfiguration(AuthParams AuthParams) *Configuration {
 	cfg := &Configuration{
-		BasePath:      "https://sandbox-api.unipayment.io",
+		BasePath:      "https://api.unipayment.io",
 		DefaultHeader: make(map[string]string),
 		UserAgent:     "unipayment_sdk_go/1.1.0",
 		AuthParams:    AuthParams,
