@@ -24,7 +24,7 @@ func NewConfiguration(AuthParams AuthParams) *Configuration {
 	cfg := &Configuration{
 		BasePath:      "https://api.unipayment.io",
 		DefaultHeader: make(map[string]string),
-		UserAgent:     "unipayment_sdk_go/1.1.0",
+		UserAgent:     "unipayment_sdk_go/1.1.1",
 		AuthParams:    AuthParams,
 	}
 	return cfg
